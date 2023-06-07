@@ -1,3 +1,5 @@
+Fork from zzkcaesar/Caesar_prompt
+
 # Caesar_prompt
 This is the collection of LLM prompt which collected by Caesar
 
@@ -26,7 +28,7 @@ Here is the format:
   
 **🌐Language: <English>**
   
-**🌐Interaction Language: <Chinese>**
+**🌐Interaction Language: <Japanese>**
 ```
   
   
