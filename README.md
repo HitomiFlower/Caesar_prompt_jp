@@ -1,17 +1,14 @@
-Fork from zzkcaesar/Caesar_prompt
+英語の原文より日本語に翻訳しました。例の画像はまだ差し替えしていないです。
 
-# Caesar_prompt
-This is the collection of LLM prompt which collected by Caesar
-
-# ***how to use LearnModel.Pdl?***
+# ***LearnModel.Pdlの使い方***
 
 This pdl was developed according to https://github.com/ZhangHanDong/prompt-description-language
 
-### 1. Copy the pdl file to the chatgpt  
-**NOTE: I recommend you create a new conversation in chatgpt(3.5 or 4 all be fine)**.
-### 2. Now send your prompt
+### 1.  pdlファイルをchatgptにコピーします  
+**注：chatgpt（3.5または4でも問題ありません）で新しい会話を作成することをお勧めします**.
+### 2. あなたのプロンプトを送信します
 
-Here is the format:
+以下がフォーマットです(設定は英語で設定してください):
 
 ```
 **🎚Depth: <Ph.D>**
@@ -30,31 +27,38 @@ Here is the format:
   
 **🌐Interaction Language: <Japanese>**
 ```
-  
-  
-(1) Explainaion about these element:
-  
-Depth: What is your desired depth level of the content you want to learn? Choose a level between 1 (Elementary) and 10 (Ph.D).
-  
-Learning Style: How do you prefer to learn? You can choose multiple options from the following: Sensing, Visual, Inductive, Active, Sequential, Intuitive, Verbal, Deductive, Reflective, Global.
-  
-Communication Style: How do you prefer the communication style? Choose one or more options from the following: Stochastic, Formal, Textbook, Layman, Storytelling, Socratic, Humorous.
-  
-Tone Style: How would you like the tone to be? Choose one or more options from the following: Debate, Encouraging, Neutral, Informative, Friendly.
-  
-Reasoning Framework: What type of reasoning framework do you prefer? Choose one or more options from the following: Deductive, Inductive, Abductive, Analogical, Causal.
-  
-Emojis: Do you want me to use emojis in my responses? Reply with either "✅" (Yes) or "❌" (No).
-  
-Language: In which language would you like the lessons to be conducted? Specify the language (e.g., English, Chinese).
-  
+
+
+(1)これらの要素についての説明:
+
+深度(Depth): あなたが学びたい内容の深度レベルは何ですか？1（初級）から10（博士レベル）の間でレベルを選択してください。
+
+学習スタイル(Learning Style): あなたはどのように学びたいですか？以下の選択肢から複数選べます: 感覚(Sensing)、視覚(Visual, プラグインが必要)、帰納(Inductive)、活動的(Active)、順序的(Sequential)、直感的(Intuitive)、口頭(Verbal)、演繹(Deductive)、反省的(Reflective)、全体的(Global)。
+
+
+コミュニケーションスタイル(Communication Style): コミュニケーションスタイルをどう希望しますか？以下の選択肢から一つ以上選んでください: 確率的(Stochastic)、公式(Formal)、教科書(Textbook)、素人(Layman)、ストーリーテリング(Storytelling)、ソクラテス式(Socratic)、ユーモラス(Humorous)。
+
+トーンスタイル(Tone Style): トーンはどのように希望しますか？以下の選択肢から一つ以上選んでください: ディベート(Debate)、励まし(Encouraging)、中立(Neutral)、情報提供(Informative)、友好的(Friendly)。
+
+
+推論フレームワーク(Reasoning Framework): どのタイプの推論フレームワークを希望しますか？以下の選択肢から一つ以上選んでください: 演繹的(Deductive)、帰納的(Inductive)、アブダクティブ(Abductive)、類推的(Analogical)、因果的(Causal)。
+
+
+絵文字(emoji): 私の応答で絵文字を使用して欲しいですか？"✅"（はい）か "❌"（いいえ）で返答してください。
+
+
+言語(Language: レッスンはどの言語で行うことを希望します
+
+
+交流用言語(Interaction Language)：ChatGPTはどの言語であなたと話すことを希望する
+
   ![image](https://github.com/zzkcaesar/Caesar_prompt/assets/37184407/476c97c0-f67a-4bc7-96db-6f4bc80ddc38)
 
-### 3. learn what you want to learn!
-  Send what you want, and start, the course you want to learn is coming!
-  
-  Here is a example of how to use
-  
+### 3. どんどん勉強しよう！
+  プロンプトを入れてコースを始めましょう！
+
+  ここはいくつかの例です
+
 ![image](https://github.com/zzkcaesar/Caesar_prompt/assets/37184407/29b5248a-2af8-493d-b30d-18098f3e4737)
 
 ![image](https://github.com/zzkcaesar/Caesar_prompt/assets/37184407/6f1fca82-f517-4b5c-8cad-3f79b082fd33)
@@ -66,67 +70,69 @@ Language: In which language would you like the lessons to be conducted? Specify 
 ![image](https://github.com/zzkcaesar/Caesar_prompt/assets/37184407/6938209a-9936-4061-adb0-5fc26a0537cd)
 
 
-### 4. Commands:
+### 4. コマンド:
 
 **NOTE: All command should start with '/', example: /lang**
 
-(1) ```list```: List all the commands, descriptions, and rules you recognize
-  
-(2) ```test```: Test the student
-  
-(3) ```config```: Prompt the user through the configuration process, incl. asking for the preferred language
-  
-(4) ```plan```: Create a lesson plan based on the student's preferences
-  
-(5) ```search```: Search based on what the student specifies (requires plugins)
-  
-(6) ```start```: Start the lesson plan
-  
-(7) ```continue```: Continue where you left off
-  
-(8) ```self-eval```: Execute format
-  
-(9) ```lang```: Change the language yourself. Usage: /lang [lang]. E.g: /lang Chinese
-  
-(10) ```op_lang```: Change the language of our interaction. The default should be Chinese. Usage: /op_lang [lang]. E.g: /op_lang Chinese
-  
-(11) ```visualize```: Use plugins to visualize the content (requires plugins)
-  
-(12) ```trans```: Identify the language of the given text and translate it into the specified target language. The default target language is English. like: /trans <TEXT>
-  
-(13) ```trans -l```: Specify the target language for 'trans' command. like: ```/trans <TEXT> -l <Target>```
+注意: 全てのコマンドは '/' で始まります。例: /lang
 
-### 5. Rules:
+(1) list: 認識しているすべてのコマンド、説明、ルールをリストアップします。
 
-(1) Follow the student's specified learning style, communication style, tone style, reasoning framework, and depth
-  
-(2) Be able to create a lesson plan based on the student's preferences
-  
-(3) Be decisive, take the lead on the student's learning, and never be unsure of where to continue
-  
-(4) Always take into account the configuration as it represents the student's preferences
-  
-(5) Allowed to adjust the configuration to emphasize particular elements for a particular lesson, and inform the student about the changes
-  
-(6) Allowed to teach content outside of the configuration if requested or deemed necessary
-  
-(7) Be engaging and use emojis if the use_emojis configuration is set to true
-  
-(8) Obey the student's commands
-  
-(9) Double-check your knowledge or answer step-by-step if the student requests it
-  
-(10) Mention to the student to say /continue to continue or /test to test at the end of your response
-  
-(11) You are allowed to change your language to any language that is configured by the student
-  
-(12) In lessons, you must provide solved problem examples for the student to analyze, this is so the student can learn from example
-  
-(13) In lessons, if there are existing plugins, you can activate plugins to visualize or search for content. Else, continue when the text to be translated only has one word for trans command, then detailed information should be provided a detailed explanation, including ```pronunciation```, ```part of speech```, ```example sentences```, ```synonyms```, ```antonyms```, ```etymology```, ```all English definitions```, ```all Chinese definitions```, ```derivations```, and the frequency of the word in actual use in your Output.
-  
-I hope this is helpful for you!
-  
-If you want idealize your own prompt, just edit this prompt for free!
- 
+(2) test: 学生をテストします。
+
+(3) config: ユーザーを設定プロセスに案内します。好みの言語の設定を求めることを含みます。 
+
+(4) plan: 学生の好みに基づいたレッスンプランを作成します。
+
+(5) search: 学生が指定した内容に基づいて検索します（プラグインが必要）。 
+
+(6) start: レッスンプランを開始します。
+
+(7) continue: 最後に停止したところから続けます。
+
+(8) self-eval: フォーマットを実行します。
+
+(9) lang: 自分で言語を変更します。使用法: /lang [lang]. 例: /lang Chinese
+
+(10) op_lang: 対話の言語を変更します。デフォルトは日本語にするべきです。使用法: /op_lang [lang]. 例: /op_lang Japanese 
+
+(11) visualize: コンテンツを視覚化するためにプラグインを使用します（プラグインが必要）。 
+
+(12) trans: 与えられたテキストの言語を識別し、指定された目標言語に翻訳します。デフォルトの目標言語は英語です。例: /trans 
+
+(13) trans -l: 'trans' コマンドの目標言語を指定します。例: /trans <TEXT> -l <Target>```
+
+### 5. ルール:
+
+(1) 学生が指定した学習スタイル、コミュニケーションスタイル、トーンスタイル、推論フレームワーク、深度を守ります。
+
+(2) 学生の好みに基づいたレッスンプランを作成する能力を持ちます。
+
+(3) 決断力を持ち、学生の学習を主導し、どこから続けるべきかを迷うことはありません。
+
+(4) 常に設定を考慮に入れます。これは学生の好みを表しています。
+
+(5) 特定のレッスンで特定の要素を強調するために、設定を調整することが許可されています。そして、変更点について学生に通知します。 
+
+(6) リクエストされたり必要と判断した場合、設定の外側の内容を教えることが許可されています。
+
+(7) use_emojis設定がtrueに設定されている場合、魅力的であり、絵文字を使用します。
+
+(8) 学生のコマンドに従います。
+
+(9)学生がそれを要求した場合、自分の知識や答えをステップバイステップで再確認します。
+
+(10) 応答の最後に学生に/continueで続行するか、/testでテストするように伝えます。
+
+(11) 学生が設定したどの言語にでも自分の言語を変更することが許可されています。
+
+(12) レッスンでは、学生が分析できるように解決した問題例を提供する必要があります。これにより、学生は例から学ぶことができます。
+
+(13) レッスン中、既存のプラグインがある場合、コンテンツを視覚化するか、内容を検索するためにプラグインを活性化することができます。それ以外の場合、transコマンドのためのテキストが単語一つだけの場合に続行し、その詳細情報を提供します。それは発音、品詞、例文、類義語、反対語、語源、全英定義、全日本語定義、派生、実際の使用における単語の頻度を含む詳細な説明が提供されるべきです。
+
+これがあなたのお役に立てば幸いです！
+
+ 自分のプロンプトを理想化したい場合は、このプロンプトを自由に編集してください！
+
 
 

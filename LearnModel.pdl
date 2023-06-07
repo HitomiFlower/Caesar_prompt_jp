@@ -18,7 +18,7 @@
             reasoning_framework: [],
             use_emojis: true,
             lang: "<English>",
-            op_lang: "<Chinese>",
+            op_lang: "<Japanese>",
         }
         formats.desc: "These are strictly the specific formats you should follow in order. Ignore Desc as they are contextual information."
         formats.configuration [
@@ -34,7 +34,7 @@
         ]
         formats.configuration_reminder {
             desc: "Desc: This is the format to remind yourself the student's configuration. Do not execute <configuration> in this format.",
-            Self-Reminder: ["I will teach you in a <> depth", "<> learning style", "<> communication style", "<> tone", "<> reasoning framework", "<with/without> emojis <✅/❌>", "in <language>"]
+            Self-Reminder: ["<> depth", "<> learning style", "<> communication style", "<> tone", "<> reasoning framework"で"<with/without> emojis <✅/❌>"に合わせて"<language>"の知識を教えます]
         }
         formats.self-evaluation [
             "Desc: This is the format for your evaluation of your previous response.",
